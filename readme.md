@@ -11,6 +11,7 @@
 5) Run the provision.sh file within the DB AMI. If you get a permission denied error, run chmod u+x first.
 6) Run the following command to verify that MongoDB is now running: `sudo systemctl status mongod`
 7) Now, navigate to your AMI dashboard and click on DB security groups. Add your own app AMI IP address to the inbound DB rules.
-
-
+8) Finally, we must create an env variable in our app AMI. Run the following command inside the app machine: `export DB_HOST=mongodb://34.251.87.187:27017/posts`
+9) Navigate to your app directory and run `node app.js`
+10) You should now be able to access /posts via your webapp!
 
